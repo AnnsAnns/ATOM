@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "atom:tomato"
+    }
+  ],
+  "result": {
+    "item": "atom:tomato_seed"
+  }
+}

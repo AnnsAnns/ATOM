@@ -1,5 +1,6 @@
 {
   "item.atom.tomato": "Tomato",
   "item.atom.tomato.tooltip": "A juicy Tomato, fascinating!",
-  "itemGroup.atom.atom": "Atom"
+  "itemGroup.atom.atom": "Atom",
+  "item.atom.tomato_seed": "Tomato Seeds Bag"
 }

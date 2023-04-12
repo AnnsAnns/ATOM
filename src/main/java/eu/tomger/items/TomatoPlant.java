@@ -9,11 +9,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 
 public class TomatoPlant extends CropBlock {
     private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{
@@ -28,10 +33,10 @@ public class TomatoPlant extends CropBlock {
     }
 
     public ItemConvertible getSeedsItem() {
-        return ExampleMod.TOMATO;
+        return ExampleMod.TOMATO_SEED;
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return AGE_TO_SHAPE[state.get(this.getAgeProperty())%4];
+        return AGE_TO_SHAPE[state.get(this.getAgeProperty())/2];
     }
 }
