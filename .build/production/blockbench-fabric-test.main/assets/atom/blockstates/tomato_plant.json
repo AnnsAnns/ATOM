@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "atom:block/tomato_first"
+    },
+    "age=1": {
+      "model": "atom:block/tomato_second"
+    },
+    "age=2": {
+      "model": "atom:block/tomato_second"
+    },
+    "age=3": {
+      "model": "atom:block/tomato_second"
+    },
+    "age=4": {
+      "model": "atom:block/tomato_third"
+    },
+    "age=5": {
+      "model": "atom:block/tomato_third"
+    },
+    "age=6": {
+      "model": "atom:block/tomato_final"
+    },
+    "age=7": {
+      "model": "atom:block/tomato_final"
+    }
+  }
+}
+
