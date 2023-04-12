@@ -1,4 +1,4 @@
-# *ATOM*: *A*nother *T*iny *O*riginal *M*od
+# *ATOM*: *A*nother *T*omato *O*riented *M*od`
 
 ATOM is my excuse to learn Blockbench and at the same time add random things to Minecraft in order for me to justify wasting my time.
 
