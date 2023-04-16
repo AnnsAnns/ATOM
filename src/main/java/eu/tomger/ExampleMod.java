@@ -9,10 +9,16 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.CropBlock;
 import net.minecraft.block.Material;
 import net.minecraft.item.*;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -37,6 +43,8 @@ public class ExampleMod implements ModInitializer {
 			.icon(() -> new ItemStack(TOMATO))
 			.build();
 
+	private static final Identifier GRASS_LOOT_TABLE_ID = Blocks.GRASS.getLootTableId();
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -59,6 +67,18 @@ public class ExampleMod implements ModInitializer {
 			content.add(CORN);
 			content.add(CORN_SEED);
 			content.add(CORN_CROP_BLOCK);
+		});
+
+		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+			if (source.isBuiltin() && GRASS_LOOT_TABLE_ID.equals(id)) {
+				LootPool.Builder poolBuilder = LootPool.builder()
+						.conditionally(RandomChanceLootCondition.builder(0.2f))
+						.rolls(UniformLootNumberProvider.create(0, 1))
+						.with(ItemEntry.builder(TOMATO_SEED))
+						.with(ItemEntry.builder(CORN_SEED));
+
+				tableBuilder.pool(poolBuilder);
+			}
 		});
 	}
 }
