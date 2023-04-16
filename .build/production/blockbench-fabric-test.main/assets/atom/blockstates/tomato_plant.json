@@ -4,7 +4,7 @@
       "model": "atom:block/tomato_first"
     },
     "age=1": {
-      "model": "atom:block/tomato_second"
+      "model": "atom:block/tomato_first"
     },
     "age=2": {
       "model": "atom:block/tomato_second"
@@ -13,13 +13,13 @@
       "model": "atom:block/tomato_second"
     },
     "age=4": {
-      "model": "atom:block/tomato_third"
+      "model": "atom:block/tomato_second"
     },
     "age=5": {
       "model": "atom:block/tomato_third"
     },
     "age=6": {
-      "model": "atom:block/tomato_final"
+      "model": "atom:block/tomato_third"
     },
     "age=7": {
       "model": "atom:block/tomato_final"

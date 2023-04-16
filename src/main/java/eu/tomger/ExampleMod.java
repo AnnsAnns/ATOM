@@ -1,5 +1,7 @@
 package eu.tomger;
 
+import eu.tomger.items.Corn;
+import eu.tomger.items.CornPlant;
 import eu.tomger.items.Tomato;
 import eu.tomger.items.TomatoPlant;
 import net.fabricmc.api.ModInitializer;
@@ -25,8 +27,12 @@ public class ExampleMod implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("atom");
 
 	public static final CropBlock TOMATO_CROP_BLOCK = new TomatoPlant(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+	public static final CropBlock CORN_CROP_BLOCK = new CornPlant(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
 	public static final Item TOMATO = new Tomato(new FabricItemSettings().food(FoodComponents.APPLE));
+	public static final Item CORN = new Corn(new FabricItemSettings().food(FoodComponents.CARROT));
 	public static final Item TOMATO_SEED = new AliasedBlockItem(TOMATO_CROP_BLOCK, new Item.Settings());
+
+	public static final Item CORN_SEED = new AliasedBlockItem(CORN_CROP_BLOCK, new Item.Settings());
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier("atom", "atom"))
 			.icon(() -> new ItemStack(TOMATO))
 			.build();
@@ -42,11 +48,17 @@ public class ExampleMod implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("atom", "tomato"), TOMATO);
 		Registry.register(Registries.BLOCK, new Identifier("atom", "tomato_plant"), TOMATO_CROP_BLOCK);
 		Registry.register(Registries.ITEM, new Identifier("atom", "tomato_seed"), TOMATO_SEED);
+		Registry.register(Registries.ITEM, new Identifier("atom", "corn"), CORN);
+		Registry.register(Registries.ITEM, new Identifier("atom", "corn_seed"), CORN_SEED);
+		Registry.register(Registries.BLOCK, new Identifier("atom", "corn_plant"), CORN_CROP_BLOCK);
 
 		ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
 			content.add(TOMATO);
 			content.add(TOMATO_CROP_BLOCK);
 			content.add(TOMATO_SEED);
+			content.add(CORN);
+			content.add(CORN_SEED);
+			content.add(CORN_CROP_BLOCK);
 		});
 	}
 }

@@ -1,0 +1,49 @@
+{
+  "credit": "Made with Blockbench",
+  "textures": {
+    "1": "atom:item/tomato",
+    "particle": "atom:item/tomato"
+  },
+  "elements": [
+    {
+      "name": "Tomato",
+      "from": [6, 0, 7],
+      "to": [9, 3, 10],
+      "faces": {
+        "north": {"uv": [3, 0, 6, 3], "texture": "#1"},
+        "east": {"uv": [3, 3, 6, 6], "texture": "#1"},
+        "south": {"uv": [0, 0, 3, 3], "texture": "#1"},
+        "west": {"uv": [0, 3, 3, 6], "texture": "#1"},
+        "up": {"uv": [3, 9, 0, 6], "rotation": 180, "texture": "#1"},
+        "down": {"uv": [9, 0, 6, 3], "rotation": 180, "texture": "#1"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [0.75, 8.25, 0]
+    },
+    "thirdperson_lefthand": {
+      "translation": [0, 8.75, 0]
+    },
+    "firstperson_righthand": {
+      "translation": [0, 10, 0]
+    },
+    "firstperson_lefthand": {
+      "translation": [0, 10, 0]
+    },
+    "ground": {
+      "translation": [0, 7.75, 0],
+      "scale": [1.47, 1.47, 1.47]
+    },
+    "gui": {
+      "rotation": [20, -15, 0],
+      "translation": [2, 19.75, 0],
+      "scale": [3.22, 3.22, 3.22]
+    },
+    "fixed": {
+      "translation": [1.25, 25.5, -2],
+      "scale": [4, 4, 4]
+    }
+  }
+}
