@@ -7,19 +7,19 @@
       "model": "atom:block/corn_first"
     },
     "age=2": {
-      "model": "atom:block/corn_first"
+      "model": "atom:block/corn_second"
     },
     "age=3": {
-      "model": "atom:block/corn_first"
+      "model": "atom:block/corn_second"
     },
     "age=4": {
-      "model": "atom:block/corn_first"
+      "model": "atom:block/corn_second"
     },
     "age=5": {
-      "model": "atom:block/corn_first"
+      "model": "atom:block/corn_second"
     },
     "age=6": {
-      "model": "atom:block/corn_first"
+      "model": "atom:block/corn_second"
     },
     "age=7": {
       "model": "atom:block/corn"

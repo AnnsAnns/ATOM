@@ -10,5 +10,6 @@ public class ExampleModClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
 		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.TOMATO_CROP_BLOCK, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.CORN_CROP_BLOCK, RenderLayer.getCutout());
 	}
 }

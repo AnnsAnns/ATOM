@@ -3,6 +3,7 @@ package eu.tomger.items;
 import eu.tomger.ExampleMod;
 import eu.tomger.blocks.cornplant.Corn;
 import eu.tomger.blocks.cornplant.CornFirst;
+import eu.tomger.blocks.cornplant.CornSecond;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
@@ -21,8 +22,8 @@ import net.minecraft.world.World;
 public class CornPlant extends CropBlock {
     private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{
             CornFirst.makeShape(),
-            CornFirst.makeShape(),
-            CornFirst.makeShape(),
+            CornSecond.makeShape(),
+            CornSecond.makeShape(),
             Corn.makeShape(),
     };
 
