@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"eu.tomger.ExampleMod"
+          "eu.tomger.Atom"
 		],
 		"client": [
 			"eu.tomger.ExampleModClient"

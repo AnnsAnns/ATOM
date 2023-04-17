@@ -1,24 +1,17 @@
 package eu.tomger.items;
 
-import eu.tomger.ExampleMod;
+import eu.tomger.Atom;
 import eu.tomger.blocks.tomatoplant.FinalStage;
 import eu.tomger.blocks.tomatoplant.FirstStage;
 import eu.tomger.blocks.tomatoplant.SecondStage;
 import eu.tomger.blocks.tomatoplant.ThirdStage;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 
 public class TomatoPlant extends CropBlock {
     private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{
@@ -33,7 +26,7 @@ public class TomatoPlant extends CropBlock {
     }
 
     public ItemConvertible getSeedsItem() {
-        return ExampleMod.TOMATO_SEED;
+        return Atom.TOMATO_SEED;
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
