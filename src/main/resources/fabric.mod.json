@@ -8,8 +8,8 @@
 		"tomGER"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "tomGER.eu",
+		"sources": "https://github.com/tumGER/ATOM"
 	},
 	"license": "EUPL-1.2",
 	"icon": "assets/atom/icon.png",
