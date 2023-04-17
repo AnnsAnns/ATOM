@@ -18,6 +18,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import static eu.tomger.Atom.*;
+import static eu.tomger.items.AtomItems.TOMATO;
 
 public class Helpers {
 
@@ -27,14 +28,12 @@ public class Helpers {
             .build();
 
     static void addContentToGroup(ItemConvertible entry) {
-        ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
-            content.add(entry);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> content.add(entry));
     }
 
-    static void addToLootTable(Identifier table, ItemConvertible item) {
+    static void addToLootTable(ItemConvertible item) {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (source.isBuiltin() && table.equals(id)) {
+            if (source.isBuiltin() && Helpers.GRASS_LOOT_TABLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .conditionally(RandomChanceLootCondition.builder(0.2f))
                         .rolls(UniformLootNumberProvider.create(0, 1))
@@ -54,6 +53,6 @@ public class Helpers {
         addContentToGroup(seed);
         addContentToGroup(plant);
 
-        addToLootTable(GRASS_LOOT_TABLE_ID, seed);
+        addToLootTable(seed);
     }
 }
