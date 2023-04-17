@@ -3,9 +3,9 @@
 	"id": "atom",
 	"version": "${version}",
 	"name": "ATOM",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Another Tomato Oriented Mod",
 	"authors": [
-		"Me!"
+		"tomGER"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -19,7 +19,7 @@
           "eu.tomger.Atom"
 		],
 		"client": [
-			"eu.tomger.ExampleModClient"
+			"eu.tomger.AtomClient"
 		]
 	},
 	"mixins": [
@@ -36,6 +36,5 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
 	}
 }
